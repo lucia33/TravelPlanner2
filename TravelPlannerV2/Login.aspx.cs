@@ -53,7 +53,7 @@ namespace TravelPlannerV2
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
             authenticationManager.SignOut();
-            Response.Redirect("/Login.aspx");
+            Response.Redirect("~/Login.aspx");
         }
     }
 }
