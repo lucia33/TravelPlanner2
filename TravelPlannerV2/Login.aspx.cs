@@ -20,7 +20,6 @@ namespace TravelPlannerV2
                 {
                     StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
                     LoginStatus.Visible = true;
-                    LogoutButton.Visible = true;
                 }
                 else
                 {
@@ -49,11 +48,5 @@ namespace TravelPlannerV2
             }
         }
 
-        protected void SignOut(object sender, EventArgs e)
-        {
-            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-            authenticationManager.SignOut();
-            Response.Redirect("~/Login.aspx");
-        }
     }
 }
