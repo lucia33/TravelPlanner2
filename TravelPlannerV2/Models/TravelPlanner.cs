@@ -11,13 +11,16 @@ namespace TravelPlannerV2.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class TravelPlanner
     {
         public int Id { get; set; }
+        [Required]
         public Nullable<System.DateTime> Date { get; set; }
         public string Event { get; set; }
         public string Notes { get; set; }
+        [Display (Name="Username")]
         public string UserName { get; set; }
     }
 }
