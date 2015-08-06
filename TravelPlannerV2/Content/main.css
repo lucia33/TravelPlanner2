@@ -1,2 +1,7 @@
 ﻿body {
 }
+
+/**didn't work*/
+.navbar-default {
+    background-color: #343b70;
+}
