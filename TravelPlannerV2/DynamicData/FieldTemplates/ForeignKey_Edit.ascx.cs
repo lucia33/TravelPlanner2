@@ -11,7 +11,7 @@ using TravelPlannerV2.Models;
 namespace TravelPlannerV2 {
     public partial class ForeignKey_EditField : System.Web.DynamicData.FieldTemplateUserControl {
 
-		protected TravelPlannerV2.Models.TravelPlannerConnection _db = new TravelPlannerV2.Models.TravelPlannerConnection();
+		protected TravelPlannerV2.Models.TravelPlannerChang_dbEntities2 _db = new TravelPlannerV2.Models.TravelPlannerChang_dbEntities2();
 
 		public string DataTypeName { get; set; }
 

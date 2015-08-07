@@ -102,13 +102,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\TravelPlannerModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TravelPlannerModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="404.aspx" />
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Contact.aspx" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children.ascx" />
@@ -128,20 +126,30 @@
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
     <Content Include="ErrorPage.aspx" />
-    <Content Include="Models\TravelPlannerModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TravelPlannerModel.edmx</DependentUpon>
-      <LastGenOutput>TravelPlannerModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\TravelPlannerModel.edmx.diagram">
-      <DependentUpon>TravelPlannerModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\TravelPlannerModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TravelPlannerModel.edmx</DependentUpon>
-      <LastGenOutput>TravelPlannerModel.cs</LastGenOutput>
-    </Content>
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <EntityDeploy Include="Models\TPModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TPModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TPModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TPModel.edmx</DependentUpon>
+      <LastGenOutput>TPModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\TPModel.edmx.diagram">
+      <DependentUpon>TPModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\TPModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TPModel.edmx</DependentUpon>
+      <LastGenOutput>TPModel.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,16 +180,11 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
-    <Content Include="TravelPlanners\Default.aspx" />
-    <Content Include="TravelPlanners\Delete.aspx" />
-    <Content Include="TravelPlanners\Details.aspx" />
-    <Content Include="TravelPlanners\Edit.aspx" />
-    <Content Include="TravelPlanners\Insert.aspx" />
-    <Content Include="TravelPlanners\TravelPlanners\Default.aspx" />
-    <Content Include="TravelPlanners\TravelPlanners\Delete.aspx" />
-    <Content Include="TravelPlanners\TravelPlanners\Details.aspx" />
-    <Content Include="TravelPlanners\TravelPlanners\Edit.aspx" />
-    <Content Include="TravelPlanners\TravelPlanners\Insert.aspx" />
+    <Content Include="TPs\Default.aspx" />
+    <Content Include="TPs\Delete.aspx" />
+    <Content Include="TPs\Details.aspx" />
+    <Content Include="TPs\Edit.aspx" />
+    <Content Include="TPs\Insert.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -366,23 +369,23 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\TravelPlanner.cs">
-      <DependentUpon>TravelPlannerModel.tt</DependentUpon>
+    <Compile Include="Models\TP.cs">
+      <DependentUpon>TPModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TravelPlannerModel.Context.cs">
+    <Compile Include="Models\TPModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TravelPlannerModel.Context.tt</DependentUpon>
+      <DependentUpon>TPModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TravelPlannerModel.cs">
+    <Compile Include="Models\TPModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TravelPlannerModel.tt</DependentUpon>
+      <DependentUpon>TPModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TravelPlannerModel.Designer.cs">
+    <Compile Include="Models\TPModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TravelPlannerModel.edmx</DependentUpon>
+      <DependentUpon>TPModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -400,74 +403,39 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="TravelPlanners\Default.aspx.cs">
+    <Compile Include="TPs\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TravelPlanners\Default.aspx.designer.cs">
+    <Compile Include="TPs\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TravelPlanners\Delete.aspx.cs">
+    <Compile Include="TPs\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TravelPlanners\Delete.aspx.designer.cs">
+    <Compile Include="TPs\Delete.aspx.designer.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TravelPlanners\Details.aspx.cs">
+    <Compile Include="TPs\Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TravelPlanners\Details.aspx.designer.cs">
+    <Compile Include="TPs\Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TravelPlanners\Edit.aspx.cs">
+    <Compile Include="TPs\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TravelPlanners\Edit.aspx.designer.cs">
+    <Compile Include="TPs\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TravelPlanners\Insert.aspx.cs">
+    <Compile Include="TPs\Insert.aspx.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TravelPlanners\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Delete.aspx.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Delete.aspx.designer.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Details.aspx.cs">
-      <DependentUpon>Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Details.aspx.designer.cs">
-      <DependentUpon>Details.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Edit.aspx.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Edit.aspx.designer.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TravelPlanners\TravelPlanners\Insert.aspx.designer.cs">
+    <Compile Include="TPs\Insert.aspx.designer.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
