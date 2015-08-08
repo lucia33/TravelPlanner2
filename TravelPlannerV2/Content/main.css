@@ -11,7 +11,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E1F5FCFF', endColorstr='#ffB2DCED', GradientType=0);
     -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
-    font-family: Leelawadee;
+    font-family: Leelawadee, 'Bell MT';
+}
+
+
+
+.navbar-nav {
+    font-family: Leelawadee, 'Bell MT';
 }
 
 .form-horizontal {
@@ -19,14 +25,48 @@
 }
 
 .jumbotron {
+    background-color: white;
     text-align: center;
-    font-family: Leelawadee;
+    font-family: Leelawadee,'Bell MT';
 }
 
 h1 {
-    font-family: 'Script MT';
+    font-family: 'Script MT', 'Bell MT';
+    padding-bottom: 70px;
 }
 
-h2 {
-    font-family: Leelawadee;
+h2, .modal-footer {
+    text-align: center;
+    font-family: Leelawadee, 'Bell MT';
+}
+
+.navbar-brand {
+    font-family: 'Script MT', 'Bell MT';
+    font-style: italic;
+}
+
+h3 {
+    font-family: 'Script MT', 'Bell MT';
+    font-size: 45px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.form-horizontal {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    ruby-align: center;
+}
+
+legend {
+    font-family: 'Script MT', 'Bell MT';
+}
+
+
+ul, li {
+    display: inline-block;
+    float: none;
 }

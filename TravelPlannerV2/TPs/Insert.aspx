@@ -1,4 +1,4 @@
-﻿<%@ Page Title="TPInsert" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="TravelPlannerV2.TPs.Insert" %>
+﻿<%@ Page Title="Plan A Trip" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="TravelPlannerV2.TPs.Insert" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
@@ -9,7 +9,7 @@
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <InsertItemTemplate>
                 <fieldset class="form-horizontal">
-                    <legend>Insert TP</legend>
+                    <legend>Plan A Trip</legend>
                     <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
                     <asp:DynamicControl Mode="Insert" DataField="Name" runat="server" />
                     <asp:DynamicControl Mode="Insert" DataField="PhoneNumber" runat="server" />

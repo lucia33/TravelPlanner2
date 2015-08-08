@@ -1,8 +1,10 @@
-﻿<%@ Page Title="TPList" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Default.aspx.cs" Inherits="TravelPlannerV2.TPs.Default" %>
+﻿<%@ Page Title="Travel Plan List" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Default.aspx.cs" Inherits="TravelPlannerV2.TPs.Default" %>
 
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
+
+
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <h2>TPs List</h2>
+    <h2>Travel Plan List</h2>
     <p>
         <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
     </p>
@@ -12,7 +14,7 @@
             ItemType="TravelPlannerV2.Models.TP"
             SelectMethod="GetData">
             <EmptyDataTemplate>
-                There are no entries found for TPs
+                There are no entries found for TPs.
             </EmptyDataTemplate>
             <LayoutTemplate>
                 <table class="table">
@@ -48,6 +50,7 @@
                             <th>
                                 <asp:LinkButton Text="Other Requirements" CommandName="Sort" CommandArgument="OtherRequests" runat="Server" />
                             </th>
+                            <!--Trying to get the UserName from the website instead of asking user to input-->
                             <th>
                                 <asp:LinkButton Text="User Name" CommandName="Sort" CommandArgument="UserName" runat="Server" />
                             </th>

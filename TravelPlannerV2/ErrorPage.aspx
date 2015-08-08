@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="Error" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="ErrorPage.aspx.cs" Inherits="TravelPlannerV2.ErrorPage" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Error:</h2>
     <p></p>
     <asp:Label ID="FriendlyErrorMsg" runat="server" Text="Label" Font-Size="Large" style="color: red"></asp:Label>
@@ -20,7 +18,7 @@
 
         <h4>Detailed Error Message:</h4>
         <p>
-            <asp:Label ID="InnerMesErrorMsgTextBoxsage" runat="server" Font-Size="Small" /><br />
+            <asp:Label ID="InnerMessage" runat="server" Font-Size="Small" /><br />
         </p>
         <p>
             <asp:Label ID="InnerTrace" runat="server"  />

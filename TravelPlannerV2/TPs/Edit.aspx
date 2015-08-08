@@ -11,7 +11,7 @@
             </EmptyDataTemplate>
             <EditItemTemplate>
                 <fieldset class="form-horizontal">
-                    <legend>Edit TP</legend>
+                    <legend>Edit Details</legend>
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
 						    <asp:DynamicControl Mode="Edit" DataField="Name" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumber" runat="server" />

@@ -7,18 +7,19 @@
 <!-- Author: Chang Liu -->
 <!-- Web App Name: Travel Planner -->
 <!-- Created on: July 16, 2015 -->
+<!-- This app allows users to register, book a trip-->
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <!-- CSS -->
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="Content/main.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+<link href="Content/bootstrap.min.css" rel="stylesheet" />
+<link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<link href="Content/main.css" rel="stylesheet" />
+<asp:contentplaceholder id="head" runat="server">
+    </asp:contentplaceholder>
 </head>
 <body>
     <div class="container-fluid">
@@ -36,14 +37,14 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#">Travel Planner</a>
+                                <a class="navbar-brand" href="/default.aspx">Travel Planner</a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/TPs/Default.aspx">Travel Planner</a></li>
-                                    <li><a href="Contact.aspx">Contact</a></li>
+                                    <li><a href="/TPs/Insert.aspx">Plan A Trip</a></li>
+                                    <li><a href="/Contact.aspx">Contact</a></li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a href="/Register.aspx">Register</a></li>
@@ -74,11 +75,11 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                                 <ul class="nav navbar-nav">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/TPs/Default.aspx">Travel Planner</a></li>
-                                    <li><a href="Contact.aspx">Contact</a></li>
+                                    <li><a href="/TPs/Default.aspx">Plan List</a></li>
+                                    <li><a href="/Contact.aspx">Contact</a></li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="navbar-text">Hello,
+                                    <li class="navbar-text">YOLO, 
                                         <asp:LoginName ID="LoginName1" runat="server" />
                                     </li>
                                     <li><a href="/Logout.aspx">Logout</a></li>
@@ -100,6 +101,15 @@
     <!-- JS -->
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+
+    <!--footer-->
+    <footer class="modal-footer">
+        <div class="container">
+            Site designed by @Chang 2015
+        </div>
+    </footer>
 </body>
+
 </html>
+
 
